@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Satria Pinandita Abyatarsyah">
+		<meta name="description" content="Ujian Tengah Semester Praktikum mata kuliah Desain & Pemrograman Web">
+		
+		<title>Home</title>
+		
+		<!-- Logo Title -->
+		<link rel="icon" href="img/logo(badge).png">
+		<!-- Eksternal CSS -->
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<!-- Icon -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	</head>
+	<body>
+		<header id="homepage" class="container-fluid mt-0">
+			<div class="container-sm container-md">
+				<nav id="navheader" class="navbar navbar-expand-lg navbar-dark pt-3">
+					<a class="navbar-brand col-2 me-0" href="index.html">
+						<img src="img/logo.png" alt="Logo Around" width="120">
+					</a>
+					<button class="navbar-toggler menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fa fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav col-9 justify-content-center">
+							<li class="nav-item px-2 px-lg-3">
+								<a class="nav-link text-white" href="index.html">Home</a>
+							</li>
+							<li class="nav-item px-2 px-lg-3">
+								<a class="nav-link text-white" href="packages.html">Packages</a>
+							</li>
+							<li class="nav-item px-2 px-lg-3">
+								<a class="nav-link text-white" href="about.html">About</a>
+							</li>
+							<li class="nav-item px-2 px-lg-33">
+								<a class="nav-link text-white" href="contact.html">Contact</a>
+							</li>
+						</ul>
+						<div class="d-flex w-100 justify-content-center justify-content-lg-end">
+							<a href="#" id="signup-text" class="nav-link align-self-center"
+								data-bs-toggle="modal" data-bs-target="#signup">
+								Sign Up
+							</a>
+							<a href="#" id="login-text" class="nav-link align-self-center rounded-pill px-4"
+								data-bs-toggle="modal" data-bs-target="#login">
+								Login
+							</a>
+						</div>
+					</div>
+				</nav>
+				
+				<!-- Sign Up Modal -->
+				<div id="signup" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="row">
+								<div class="pe-4 pt-2 text-end">
+									<i class="fa fa-times close" aria-hidden="true" data-bs-dismiss="modal" style="cursor: pointer;"></i>
+								</div>
+							</div>
+							<div class="row">
+								<div class="text-center pt-3">
+									<img src="img/logo(badge).png" class="col-2 img-fluid">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="text-center pt-3">
+									<h4 class="fw-bolder">Sign Up to Around</h4>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-10">
+									<div class="form-group mb-3">
+										<label for="fullname" style="font-weight: 500;">Fullname</label>
+										<input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Fullname" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="username" style="font-weight: 500;">Username</label>
+										<input name="username" type="text" class="form-control" id="username" placeholder="Your Username" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="email" style="font-weight: 500;">Email address</label>
+										<input name="email" type="email" class="form-control" id="email" placeholder="Your E-mail" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="pass" style="font-weight: 500;">Password</label>
+										<input name="pass" type="password" class="form-control" id="password" placeholder="Your Password" required>
+									</div>
+									<div class="form-group text-center mb-3">
+										<input class="form-check-input" type="checkbox" value="" id="terms" required>
+										<label class="form-check-label" for="terms">
+											I have read and agree to the <a href="index.html" style="color: #FB7944; font-weight: 500;">Terms and Conditions</a>
+										</label>
+									</div>
+									<div class="w-100 text-center">
+										<button onclick="register()" name="registration" type="submit" class="button rounded px-2 py-1 w-100 my-3">Sign Up</button>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-10 d-flex align-items-center justify-content-around">
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+									<span>Or</span>
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 12px;">
+										<img src="img/google_logo.png" class="img-fluid" id="img-google">
+										<span class="brand-text"><span class="brand-text-addon">Sign up with </span>Google</span>
+									</button>
+								</div>
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 12px;">
+										<img src="img/facebook_logo.png" class="img-fluid brand-img" id="img-facebook">
+										<span class="brand-text"><span class="brand-text-addon">Sign up with </span>Facebook</span>
+									</button>
+								</div>
+							</div>
+							<div class="row justify-content-center mb-3">
+								<div id="already-have" class="col-10 text-center">
+									<span>Already have an Account?</span>
+									<span data-bs-dismiss="modal"><a href="#" style="color: #FB7944; font-weight: 500;" data-bs-toggle="modal" data-bs-target="#login">
+										Login here.
+									</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Login Modal -->
+				<div id="login" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="row">
+								<div class="pe-4 pt-2 text-end">
+									<i class="fa fa-times close" aria-hidden="true" data-bs-dismiss="modal" style="cursor: pointer;"></i>
+								</div>
+							</div>
+							<div class="row">
+								<div class="text-center pt-3">
+									<img src="img/logo(badge).png" class="col-2 img-fluid">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="text-center pt-3">
+									<h4 class="fw-bolder">Login to Around</h4>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<form class="col-10">
+									<div class="form-group mb-3">
+										<label for="username" style="font-weight: 500;">Username</label>
+										<input type="text" class="form-control" id="user" placeholder="Your Username" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="pass" style="font-weight: 500;">Password</label>
+										<input type="password" class="form-control" id="pass" placeholder="Your Password" required>
+									</div>
+									<div class="w-100 text-center">
+										<button onclick="login()" type="submit" class="button rounded px-2 py-1 w-100 my-3">Login</button>
+									</div>
+								</form>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-10 d-flex align-items-center justify-content-around">
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+									<span>Or</span>
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+								</div>
+							</div>
+							<div class="row justify-content-center mb-3">
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 13px;">
+										<img src="img/google_logo.png" class="img-fluid" id="img-google">
+										<span class="brand-text"><span class="brand-text-addon">Login with </span>Google</span>
+									</button>
+								</div>
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 13px;">
+										<img src="img/facebook_logo.png" class="img-fluid brand-img" id="img-facebook">
+										<span class="brand-text"><span class="brand-text-addon">Login with </span>Facebook</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="header-textbox" class="position-absolute start-50 translate-middle">
+					<div class="text-white text-center">
+						<h1>Plan Your Trip With <span style="color: #FB7944;">Around</span></h1>
+						<p class="fw-lighter mb-3">Your best travel experience is with us.</p>
+						<a href="">
+							<button class="button rounded px-4 py-2 rounded-pill">Explore Now</button>
+						</a>
+					</div>
+				</div>
+				
+				<div id="search-bar" class="position-absolute start-50 translate-middle-x">
+					<div class="row align-items-end justify-content-between">
+						<div id="loc-input" class="form-group col-lg-4 justify-content-center mt-2 mt-lg-0">
+							<label for="location" style="font-weight: 500;">Location</label>
+							<input name="location" type="text" class="form-control" id="location" placeholder="Where?" required>
+						</div>
+						<div id="date-input" class="form-group col-lg-3 justify-content-center mt-2 mt-lg-0 mobile">
+							<label for="date" style="font-weight: 500;">Date</label>
+							<input name="date" type="date" class="form-control" id="date" placeholder="When?" required>
+						</div>
+						<div id="price-input" class="form-group col-lg-3 justify-content-center mt-2 mt-lg-0 mobile">
+							<label for="price" style="font-weight: 500;">Price</label>
+							<input name="price" type="number" min="1" step="any" class="form-control" id="Price" placeholder="How much?" required>
+						</div>
+						<a href="" class="col-lg-2 text-end text-lg-start mt-3 mt-lg-0">
+							<button class="button px-3 py-2 rounded-pill">Search</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="popular" class="container-sm container-md" style="margin-top: 150px;">
+				<h1 class="text-center text-md-start" style="font-weight: 550;">Popular Destination</h1>
+				<p class="text-center text-md-start" >From historical cites to natural splendors, come see the best of world!</p>
+				<div id="carouselDestination" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="row px-1">
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination1.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">01 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6 class="">Eiffel Tower > Paris</h6>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination2.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">02 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Monas > Jakarta</h6>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination3.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">03 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Burj Khalifa > Dubai</h6>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination8.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">04 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Big Ben > London</h6>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="row px-1">
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination5.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">05 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Pantai Pasir Putih > Jakarta</h6>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination6.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">06 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Gunung Bromo > Malang</h6>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination7.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">07 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Danau Toba > Samosir</h6>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 col-md-3 py-3">
+									<a href="" class="text-decoration-none text-black">
+										<div class="pop-destination p-2 rounded">
+											<img src="img/destination4.jpg" class="img-fluid rounded">
+											<div class="d-flex align-items-center">
+												<h3 class="me-3">08 </h3>
+												<span class="line"
+												style="width: 15%; height: 3px; background-color: #FB7944; filter: opacity(50%);"></span>
+											</div>
+											<h6>Gedung Sate > Bandung</h6>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselDestination" data-bs-slide="prev">
+						<i class="fa fa-chevron-circle-left fs-1 icon-control" aria-hidden="true"></i>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselDestination" data-bs-slide="next">
+						<i class="fa fa-chevron-circle-right fs-1 icon-control" aria-hidden="true"></i>
+					</button>
+				</div>
+			</section>
+			<section id="special" class="container-sm container-md">
+				<div class="row justify-content-center">
+					<div class="col-lg-7 text-center">
+						<h1 style="font-weight: 550;">Special Offers</h1>
+						<p>Destination can describe where you are going, like a traveler whose destination is paris,
+						or a place that is known for a particular purpose.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="promo-place p-2 rounded">
+								<img src="img/place1.jpg" class="img-fluid rounded mb-2">
+								<div class="d-flex align-items-center justify-content-between">
+									<h3 class="my-auto">$125</h3>
+									<button class="button button-outline py-1 px-2 rounded-pill">20% Off</button>
+								</div>
+								<div class="feature-box my-2">
+									<div class="d-flex">
+										<span class="feature me-2">
+											<i class="fa fa-bed"></i>
+											2 Beds
+										</span>
+										<span class="feature">
+											<i class="fa fa-bath"></i>
+											1 Bath
+										</span>
+									</div>
+									<div class="d-flex my-1">
+										<span class="feature me-2">
+											<i class="fa fa-fire"></i>
+											1 Bonfire
+										</span>
+										<span class="feature">
+											<i class="fa fa-soccer"></i>
+											1 Playground
+										</span>
+									</div>
+								</div>
+								<p class="m-0">
+									5.0
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									(4.567)
+								</p>
+								<div class="d-flex justify-content-end mt-2">
+									<a href="">
+										<button class="button px-3 py-1 rounded-pill">View</button>
+									</a>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="promo-place p-2 rounded">
+								<img src="img/place2.jpg" class="img-fluid rounded mb-2">
+								<div class="d-flex align-items-center justify-content-between">
+									<h3 class="my-auto">$50</h3>
+									<button class="button button-outline py-1 px-2 rounded-pill">10% Off</button>
+								</div>
+								<div class="feature-box my-2">
+									<div class="d-flex">
+										<span class="feature me-2">
+											<i class="fa fa-bed"></i>
+											2 Beds
+										</span>
+										<span class="feature">
+											<i class="fa fa-bath"></i>
+											1 Bath
+										</span>
+									</div>
+									<div class="d-flex my-1">
+										<span class="feature me-2">
+											<i class="fa fa-fire"></i>
+											1 Bonfire
+										</span>
+										<span class="feature">
+											<i class="fa fa-futbol-o"></i>
+											1 Playground
+										</span>
+									</div>
+								</div>
+								<p class="m-0">
+									4.5
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									(5.122)
+								</p>
+								<div class="d-flex justify-content-end mt-2">
+									<a href="">
+										<button class="button px-3 py-1 rounded-pill">View</button>
+									</a>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="promo-place p-2 rounded">
+								<img src="img/place3.jpg" class="img-fluid rounded mb-2">
+								<div class="d-flex align-items-center justify-content-between">
+									<h3 class="my-auto">$150</h3>
+									<button class="button button-outline py-1 px-2 rounded-pill">30% Off</button>
+								</div>
+								<div class="feature-box my-2">
+									<div class="d-flex">
+										<span class="feature me-2">
+											<i class="fa fa-bed"></i>
+											2 Beds
+										</span>
+										<span class="feature">
+											<i class="fa fa-bath"></i>
+											1 Bath
+										</span>
+									</div>
+									<div class="d-flex my-1">
+										<span class="feature me-2">
+											<i class="fa fa-fire"></i>
+											1 Bonfire
+										</span>
+										<span class="feature">
+											<i class="fa fa-soccer"></i>
+											1 Playground
+										</span>
+									</div>
+								</div>
+								<p class="m-0">
+									5.0
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									(2.756)
+								</p>
+								<div class="d-flex justify-content-end mt-2">
+									<a href="">
+										<button class="button px-3 py-1 rounded-pill">View</button>
+									</a>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="why" class="sontainer-sm container-md" style="margin-top: 100px;">
+				<div class="col-10 col-md-8 mx-auto">
+					<h3 class="text-center">Why Around?</h3>
+					<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut aliqua, consectetur adipisicing elit, incididunt ut aliqua.</p>
+				</div>
+				<div class="row align-items-center justify-content-between">
+					<div class="accordion accordion-flush col-lg-6" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+							<button class="button-why accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+							Full Trip
+							</button>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua, consectetur adipisicing elit.</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+							<button class="button-why accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+							Simple
+							</button>
+							</h2>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua, elit.</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+							<button class="button-why accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+							Safe
+							</button>
+							</h2>
+							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut aliqua, consectetur adipisicing elit, labore et dolore magna.</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFour">
+							<button class="button-why accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+							Good Deal
+							</button>
+							</h2>
+							<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut aliqua, consectetur adipisicing elit,</div>
+							</div>
+						</div>
+					</div>
+					<img class="col-8 col-lg-4 mx-auto" id="why-pic" src="img/logo2.png">
+				</div>
+			</section>
+			<section id="testimonials" class="container-fluid p-5" style="background-color: #F4F4F5; margin-top: 100px;">
+				<div class="container-sm container-md mx-auto"></div>
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<h5>Testimonials</h5>
+							<h1>Our Customers Feedback</h1>
+						</div>
+						<div class="col-md-6">
+							<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<div class="card ps-5 border-0 p-5" style="background-color: #EA5C2B;">
+											<div class="card-body py-0 text-white">
+												<h5 class="card-title m-0">Romuald Vladislav</h5>
+												<p class="card-text text-white-50">Programming</p>
+												<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. adipisicing elit consectetur.</p>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="card ps-5 border-0 p-5" style="background-color: #EA5C2B;">
+											<div class="card-body py-0 text-white">
+												<h5 class="card-title m-0">Columbanus Hiawatha</h5>
+												<p class="card-text text-white-50">Design</p>
+												<p class="card-text">Lorem ipsum dolor sit amet, sed do eiusmod. sed do eiusmod do eiusmod.</p>
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="card ps-5 border-0 p-5" style="background-color: #EA5C2B;">	
+											<div class="card-body py-0 text-white">
+												<h5 class="card-title m-0">John Washington</h5>
+												<p class="card-text text-white-50">Marketing</p>
+												<p class="card-text">tempor incididunt ut labore et dolore magna aliqua. dolore magna aliqua.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="button-testimonials carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="button-testimonials carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+		<footer class="container-fluid" style="margin-top: 100px;">
+			<div class="row container-md p-5 justify-content-center m-auto align-items-center">
+				<div class="col-12 col-lg-5 col-xl-6">
+					<div class="row">
+						<a href="index.html">
+							<img class="col-6 img-fluid" src="img/logo.png">
+						</a><br>
+					</div>
+				</div>
+				<div class="col-12 col-lg-7 col-xl-6 row footer-links">
+					<div class="col-sm-4 mt-2 mt-sm-0">
+						<h5 class="fw-bold">Information</h5>
+						<a class="text-decoration-none text-black" href="index.html">Home</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">Travel</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">Blog</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">About</a><br>
+					</div>
+					<div class="col-sm-4 mt-2 mt-sm-0">
+						<h5 class="fw-bold">Helpful Links</h5>
+						<a class="text-decoration-none text-black" href="mailto:eduity@gmail.com">For Business</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">Support</a><br>
+						<a class="text-decoration-none text-black" href="index.html">Terms & Condition</a><br>
+						<a class="text-decoration-none text-black" href="index.html">Privacy & Policy</a>
+					</div>
+					<div class="col-sm-4 mt-2 mt-sm-0">
+						<h5 class="fw-bold">Contact</h5>
+						<a class="text-decoration-none text-black" href="tel:08710297289">(+62)87 1029 7289</a><br>
+						<a class="text-decoration-none text-black" href="mailto:eduity@gmail.com">eduity@gmail.com</a><br>
+						<div class="icons">
+							<a href="index.html"><i class="fa fa-facebook"></i></a>
+							<a href="index.html"><i class="fa fa-twitter"></i></a>
+							<a href="index.html"><i class="fa fa-instagram"></i></a>
+							<a href="index.html"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row container-sm container-md justify-content-center m-auto">
+				<span class="line" style="width: 100%;"></span>
+				<p class="text-center my-2 fw-light">Copyright @ 2022 Around. All Right Reserved.</p>
+			</div>
+		</footer>
+		<!-- Script JS for Bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Login Register Script -->
+		<script type="text/javascript">
+			var name = "";
+			var username = "";
+			var email = "";
+			var password = "";
+
+			function register() {
+				name = document.getElementById("fullname").value;
+				username = document.getElementById("username").value;
+				email = document.getElementById("email").value;
+				password = document.getElementById("password").value;
+			
+	            alert("Selamat anda telah berhasil register!");
+
+			}
+
+	        function login() {
+	            var status = 0;
+
+	            // value nama
+				var user = document.getElementById("user").value;
+				// value password
+				var pass = document.getElementById("pass").value;
+
+	            if (user == username && pass == password) {
+	                alert("Selamat anda telah berhasil login!");
+	            } else {
+	                alert("Username/Password yang anda masukan salah!");
+	            }
+	        }
+		</script>
+	</body>
+</html>

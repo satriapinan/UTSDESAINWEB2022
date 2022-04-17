@@ -1,0 +1,14 @@
+#search {
+	/*width           : 80%;*/
+	background-color: #fff;
+	border-radius   : 15px;
+	padding         : 25px;
+	box-shadow      : 2px 0 10px rgb(0,0,0,0.5);
+}
+#search input {
+	background-color: #F4F4F5;
+	border-radius   : 10px;
+}
+.place:hover {
+	background-color: #F4F4F5;
+}

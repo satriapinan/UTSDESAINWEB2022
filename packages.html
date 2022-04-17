@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Satria Pinandita Abyatarsyah">
+		<meta name="description" content="Ujian Tengah Semester Praktikum mata kuliah Desain & Pemrograman Web">
+		
+		<title>Travel - Packages</title>
+		
+		<!-- Logo Title -->
+		<link rel="icon" href="img/logo(badge).png">
+		<!-- Eksternal CSS -->
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/packages.css">
+		<!-- Icon -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	</head>
+	<body>
+		<header id="packages-header" class="container-fluid mt-0">
+			<div class="container-sm container-md">
+				<nav id="navheader" class="navbar navbar-expand-lg navbar-dark pt-3">
+					<a class="navbar-brand col-2 me-0" href="index.html">
+						<img src="img/logo.png" alt="Logo Around" width="120">
+					</a>
+					<button class="navbar-toggler menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fa fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav col-9 justify-content-center">
+							<li class="nav-item px-2 px-lg-3">
+								<a class="nav-link text-white" href="index.html">Home</a>
+							</li>
+							<li class="nav-item px-2 px-lg-3">
+								<a class="nav-link text-white" href="packages.html">Packages</a>
+							</li>
+							<li class="nav-item px-2 px-lg-3">
+								<a class="nav-link text-white" href="about.html">About</a>
+							</li>
+							<li class="nav-item px-2 px-lg-33">
+								<a class="nav-link text-white" href="contact.html">Contact</a>
+							</li>
+						</ul>
+						<div class="d-flex w-100 justify-content-center justify-content-lg-end">
+							<a href="#" id="signup-text" class="nav-link align-self-center"
+								data-bs-toggle="modal" data-bs-target="#signup">
+								Sign Up
+							</a>
+							<a href="#" id="login-text" class="nav-link align-self-center rounded-pill px-4"
+								data-bs-toggle="modal" data-bs-target="#login">
+								Login
+							</a>
+						</div>
+					</div>
+				</nav>
+				
+				<!-- Sign Up Modal -->
+				<div id="signup" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="row">
+								<div class="pe-4 pt-2 text-end">
+									<i class="fa fa-times close" aria-hidden="true" data-bs-dismiss="modal" style="cursor: pointer;"></i>
+								</div>
+							</div>
+							<div class="row">
+								<div class="text-center pt-3">
+									<img src="img/logo(badge).png" class="col-2 img-fluid">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="text-center pt-3">
+									<h4 class="fw-bolder">Sign Up to Around</h4>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-10">
+									<div class="form-group mb-3">
+										<label for="fullname" style="font-weight: 500;">Fullname</label>
+										<input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Fullname" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="username" style="font-weight: 500;">Username</label>
+										<input name="username" type="text" class="form-control" id="username" placeholder="Your Username" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="email" style="font-weight: 500;">Email address</label>
+										<input name="email" type="email" class="form-control" id="email" placeholder="Your E-mail" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="pass" style="font-weight: 500;">Password</label>
+										<input name="pass" type="password" class="form-control" id="password" placeholder="Your Password" required>
+									</div>
+									<div class="form-group text-center mb-3">
+										<input class="form-check-input" type="checkbox" value="" id="terms" required>
+										<label class="form-check-label" for="terms">
+											I have read and agree to the <a href="index.html" style="color: #FB7944; font-weight: 500;">Terms and Conditions</a>
+										</label>
+									</div>
+									<div class="w-100 text-center">
+										<button onclick="register()" name="registration" type="submit" class="button rounded px-2 py-1 w-100 my-3">Sign Up</button>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-10 d-flex align-items-center justify-content-around">
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+									<span>Or</span>
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 12px;">
+										<img src="img/google_logo.png" class="img-fluid" id="img-google">
+										<span class="brand-text"><span class="brand-text-addon">Sign up with </span>Google</span>
+									</button>
+								</div>
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 12px;">
+										<img src="img/facebook_logo.png" class="img-fluid brand-img" id="img-facebook">
+										<span class="brand-text"><span class="brand-text-addon">Sign up with </span>Facebook</span>
+									</button>
+								</div>
+							</div>
+							<div class="row justify-content-center mb-3">
+								<div id="already-have" class="col-10 text-center">
+									<span>Already have an Account?</span>
+									<span data-bs-dismiss="modal"><a href="#" style="color: #FB7944; font-weight: 500;" data-bs-toggle="modal" data-bs-target="#login">
+										Login here.
+									</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Login Modal -->
+				<div id="login" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="row">
+								<div class="pe-4 pt-2 text-end">
+									<i class="fa fa-times close" aria-hidden="true" data-bs-dismiss="modal" style="cursor: pointer;"></i>
+								</div>
+							</div>
+							<div class="row">
+								<div class="text-center pt-3">
+									<img src="img/logo(badge).png" class="col-2 img-fluid">
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="text-center pt-3">
+									<h4 class="fw-bolder">Login to Around</h4>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<form class="col-10">
+									<div class="form-group mb-3">
+										<label for="username" style="font-weight: 500;">Username</label>
+										<input type="text" class="form-control" id="user" placeholder="Your Username" required>
+									</div>
+									<div class="form-group mb-3">
+										<label for="pass" style="font-weight: 500;">Password</label>
+										<input type="password" class="form-control" id="pass" placeholder="Your Password" required>
+									</div>
+									<div class="w-100 text-center">
+										<button onclick="login()" type="submit" class="button rounded px-2 py-1 w-100 my-3">Login</button>
+									</div>
+								</form>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col-10 d-flex align-items-center justify-content-around">
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+									<span>Or</span>
+									<span class="line" style="width: 45%; border-radius: 90%;"></span>
+								</div>
+							</div>
+							<div class="row justify-content-center mb-3">
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 13px;">
+										<img src="img/google_logo.png" class="img-fluid" id="img-google">
+										<span class="brand-text"><span class="brand-text-addon">Login with </span>Google</span>
+									</button>
+								</div>
+								<div class="col-5">
+									<button type="button" class="rounded py-1 w-100 my-3 fw-bolder button button-outline align-items-center"
+									style="color: #000; font-size: 13px;">
+										<img src="img/facebook_logo.png" class="img-fluid brand-img" id="img-facebook">
+										<span class="brand-text"><span class="brand-text-addon">Login with </span>Facebook</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" style="margin-top: 150px;">
+					<div id="headerPackages-textbox" class="text-white">
+						<h6 class="fw-lighter">Our Packages</h6>
+						<h1>Search Your Holiday</h1>
+					</div>
+
+					<div id="search" class="">
+						<div class="row align-items-end justify-content-between">
+							<div id="loc-input" class="form-group col-lg-4 justify-content-center mt-2 mt-lg-0">
+								<label for="location" style="font-weight: 500;">Location</label>
+								<input name="location" type="text" class="form-control" id="location" placeholder="Where?" required>
+							</div>
+							<div id="date-input" class="form-group col-lg-3 justify-content-center mt-2 mt-lg-0">
+								<label for="date" style="font-weight: 500;">Date</label>
+								<input name="date" type="date" class="form-control" id="date" placeholder="When?" required>
+							</div>
+							<div id="price-input" class="form-group col-lg-3 justify-content-center mt-2 mt-lg-0">
+								<label for="price" style="font-weight: 500;">Price</label>
+								<input name="price" type="number" min="1" step="any" class="form-control" id="Price" placeholder="How much?" required>
+							</div>
+							<a href="" class="col-lg-2 text-end text-lg-start mt-3 mt-lg-0">
+								<button class="w-100 button px-3 py-2 rounded-pill">Search</button>
+							</a>
+						</div>
+					</div>
+				</div>>
+			</div>
+		</header>
+		
+		<main>
+			<section class="container-sm container-md" style="margin-top: 100px;">
+				<div class="d-flex align-items-center ms-2 flex-wrap">
+					<div class="dropdown mt-3">
+						<button class="button rounded px-3 py-1 dropdown-toggle" type="button" id="filterBy" data-bs-toggle="dropdown" aria-expanded="false">Filter by</button>
+						<ul class="dropdown-menu" aria-labelledby="filterBy">
+							<li><a class="dropdown-item" href="#">Art</a></li>
+							<li><a class="dropdown-item" href="#">City</a></li>
+							<li><a class="dropdown-item" href="#">Culturak</a></li>
+							<li><a class="dropdown-item" href="#">Fashin</a></li>
+							<li><a class="dropdown-item" href="#">History</a></li>
+							<li><a class="dropdown-item" href="#">Music</a></li>
+							<li><a class="dropdown-item" href="#">Nature</a></li>
+							<li><a class="dropdown-item" href="#">Relax</a></li>
+							<li><a class="dropdown-item" href="#">Sport</a></li>
+						</ul>
+					</div>
+					<div class="d-flex ms-2 mt-3">
+						<button class="button button-outline py-1 px-2 rounded-pill">Name</button>
+						<button class="button button-outline py-1 px-2 ms-2 rounded-pill">Rating</button>
+						<button class="button button-outline py-1 px-2 ms-2 rounded-pill">Price</button>
+					</div>
+				</div>
+			</section>
+			<section class="container-sm container-md">
+				<div class="row">
+					<div class="col-md-6 col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="place p-2 rounded position-relative">
+								<img src="img/package1.jpg" class="img-fluid rounded mb-2">
+								<button class="top-0 position-absolute end-0 m-3 button py-1 px-2 rounded-pill">10% Off</button>
+								<div style="width: 95%;" class="mx-auto">
+									<h5 class="my-auto fw-bold">Maldives</h5>
+									<span class="text-black-50"><i class="fa fa-map-marker"></i> Oceania</span>
+									<span class="line mx-auto my-3"></span>
+									<div class="d-flex align-items-center justify-content-between">
+										<div>
+											<button class="button button-outline py-1 px-2 rounded-pill">Relax</button>
+											<button class="button button-outline py-1 px-2 rounded-pill">Sport</button>
+										</div>
+										<h5 class="my-auto">$400</h5>
+									</div>
+									<span class="line mx-auto my-3"></span>
+									<p class="fw-light">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt.
+									</p>
+									<p class="m-0">
+										5.0
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										(4.567)
+									</p>
+									<div class="d-flex justify-content-end mt-2">
+										<a href="">
+											<button class="button px-3 py-1 rounded-pill">View</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="place p-2 rounded position-relative">
+								<img src="img/package2.jpg" class="img-fluid rounded mb-2">
+								<button class="top-0 position-absolute end-0 m-3 button py-1 px-2 rounded-pill">30% Off</button>
+								<div style="width: 95%;" class="mx-auto">
+									<h5 class="my-auto fw-bold">Komodo Island</h5>
+									<span class="text-black-50"><i class="fa fa-map-marker"></i> Indonesia</span>
+									<span class="line mx-auto my-3"></span>
+									<div class="d-flex align-items-center justify-content-between">
+										<div>
+											<button class="button button-outline py-1 px-2 rounded-pill">History</button>
+											<button class="button button-outline py-1 px-2 rounded-pill">Nature</button>
+										</div>
+										<h5 class="my-auto">$75</h5>
+									</div>
+									<span class="line mx-auto my-3"></span>
+									<p class="fw-light">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt consectetur adipisicing.
+									</p>
+									<p class="m-0">
+										5.0
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										(6.098)
+									</p>
+									<div class="d-flex justify-content-end mt-2">
+										<a href="">
+											<button class="button px-3 py-1 rounded-pill">View</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="place p-2 rounded position-relative">
+								<img src="img/package3.jpg" class="img-fluid rounded mb-2">
+								<!-- <button class="top-0 position-absolute end-0 m-3 button py-1 px-2 rounded-pill">20% Off</button> -->
+								<div style="width: 95%;" class="mx-auto">
+									<h5 class="my-auto fw-bold">Hawaii</h5>
+									<span class="text-black-50"><i class="fa fa-map-marker"></i> Oceania</span>
+									<span class="line mx-auto my-3"></span>
+									<div class="d-flex align-items-center justify-content-between">
+										<div>
+											<button class="button button-outline py-1 px-2 rounded-pill">Relax</button>
+											<button class="button button-outline py-1 px-2 rounded-pill">Sport</button>
+										</div>
+										<h5 class="my-auto">$700</h5>
+									</div>
+									<span class="line mx-auto my-3"></span>
+									<p class="fw-light">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt sed.
+									</p>
+									<p class="m-0">
+										5.0
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										(3.907)
+									</p>
+									<div class="d-flex justify-content-end mt-2">
+										<a href="">
+											<button class="button px-3 py-1 rounded-pill">View</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-md-6 col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="place p-2 rounded position-relative">
+								<img src="img/package4.jpg" class="img-fluid rounded mb-2">
+								<button class="top-0 position-absolute end-0 m-3 button py-1 px-2 rounded-pill">50% Off</button>
+								<div style="width: 95%;" class="mx-auto">
+									<h5 class="my-auto fw-bold">Mount Fuji</h5>
+									<span class="text-black-50"><i class="fa fa-map-marker"></i> Japan</span>
+									<span class="line mx-auto my-3"></span>
+									<div class="d-flex align-items-center justify-content-between">
+										<div>
+											<button class="button button-outline py-1 px-2 rounded-pill">History</button>
+											<button class="button button-outline py-1 px-2 rounded-pill">Sport</button>
+										</div>
+										<h5 class="my-auto">$100</h5>
+									</div>
+									<span class="line mx-auto my-3"></span>
+									<p class="fw-light">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt incididunt tempor.
+									</p>
+									<p class="m-0">
+										4.5
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half-o"></i>
+										(2.178)
+									</p>
+									<div class="d-flex justify-content-end mt-2">
+										<a href="">
+											<button class="button px-3 py-1 rounded-pill">View</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="place p-2 rounded position-relative">
+								<img src="img/package5.jpg" class="img-fluid rounded mb-2">
+								<!-- <button class="top-0 position-absolute end-0 m-3 button py-1 px-2 rounded-pill">30% Off</button> -->
+								<div style="width: 95%;" class="mx-auto">
+									<h5 class="my-auto fw-bold">Bali</h5>
+									<span class="text-black-50"><i class="fa fa-map-marker"></i> Indonesia</span>
+									<span class="line mx-auto my-3"></span>
+									<div class="d-flex align-items-center justify-content-between">
+										<div>
+											<button class="button button-outline py-1 px-2 rounded-pill">Relax</button>
+											<button class="button button-outline py-1 px-2 rounded-pill">Cultural</button>
+										</div>
+										<h5 class="my-auto">$125</h5>
+									</div>
+									<span class="line mx-auto my-3"></span>
+									<p class="fw-light">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt adipisicing.
+									</p>
+									<p class="m-0">
+										4.5
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half-o"></i>
+										(9.453)
+									</p>
+									<div class="d-flex justify-content-end mt-2">
+										<a href="">
+											<button class="button px-3 py-1 rounded-pill">View</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 mt-3 mt-lg-0">
+						<a href="" class="text-decoration-none text-black">
+							<div class="place p-2 rounded position-relative">
+								<img src="img/package6.jpg" class="img-fluid rounded mb-2">
+								<!-- <button class="top-0 position-absolute end-0 m-3 button py-1 px-2 rounded-pill">20% Off</button> -->
+								<div style="width: 95%;" class="mx-auto">
+									<h5 class="my-auto fw-bold">New York</h5>
+									<span class="text-black-50"><i class="fa fa-map-marker"></i> USA</span>
+									<span class="line mx-auto my-3"></span>
+									<div class="d-flex align-items-center justify-content-between">
+										<div>
+											<button class="button button-outline py-1 px-2 rounded-pill">City</button>
+											<button class="button button-outline py-1 px-2 rounded-pill">Fashion</button>
+										</div>
+										<h5 class="my-auto">$200</h5>
+									</div>
+									<span class="line mx-auto my-3"></span>
+									<p class="fw-light">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor sed incididunt.
+									</p>
+									<p class="m-0">
+										4.0
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-o"></i>
+										(3.678)
+									</p>
+									<div class="d-flex justify-content-end mt-2">
+										<a href="">
+											<button class="button px-3 py-1 rounded-pill">View</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="container-sm container-md mt-3">
+				<nav aria-label="Page navigation">
+						<ul class="pagination justify-content-center">
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Previous" style="border: 1px solid #FB7944;">
+									<span aria-hidden="true" style="color: #FB7944;">&laquo;</span>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#" style="border: 1px solid #FB7944; color: #FB7944;">1</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#" style="border: 1px solid #FB7944; color: #FB7944;">2</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#" style="border: 1px solid #FB7944; color: #FB7944;">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Next" style="border: 1px solid #FB7944;">
+									<span aria-hidden="true" style="color: #FB7944;">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+			</section>
+		</main>
+		
+		<footer class="container-fluid" style="margin-top: 50px;">
+			<div class="row container-md p-5 justify-content-center m-auto align-items-center">
+				<div class="col-12 col-lg-5 col-xl-6">
+					<div class="row">
+						<a href="index.html">
+							<img class="col-6 img-fluid" src="img/logo.png">
+						</a><br>
+					</div>
+				</div>
+				<div class="col-12 col-lg-7 col-xl-6 row footer-links">
+					<div class="col-sm-4 mt-2 mt-sm-0">
+						<h5 class="fw-bold">Information</h5>
+						<a class="text-decoration-none text-black" href="index.html">Home</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">Travel</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">Blog</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">About</a><br>
+					</div>
+					<div class="col-sm-4 mt-2 mt-sm-0">
+						<h5 class="fw-bold">Helpful Links</h5>
+						<a class="text-decoration-none text-black" href="mailto:eduity@gmail.com">For Business</a><br>
+						<a class="text-decoration-none text-black" href="contact.html">Support</a><br>
+						<a class="text-decoration-none text-black" href="index.html">Terms & Condition</a><br>
+						<a class="text-decoration-none text-black" href="index.html">Privacy & Policy</a>
+					</div>
+					<div class="col-sm-4 mt-2 mt-sm-0">
+						<h5 class="fw-bold">Contact</h5>
+						<a class="text-decoration-none text-black" href="tel:08710297289">(+62)87 1029 7289</a><br>
+						<a class="text-decoration-none text-black" href="mailto:eduity@gmail.com">eduity@gmail.com</a><br>
+						<div class="icons">
+							<a href="index.html"><i class="fa fa-facebook"></i></a>
+							<a href="index.html"><i class="fa fa-twitter"></i></a>
+							<a href="index.html"><i class="fa fa-instagram"></i></a>
+							<a href="index.html"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row container-sm container-md justify-content-center m-auto">
+				<span class="line" style="width: 100%;"></span>
+				<p class="text-center my-2 fw-light">Copyright @ 2022 Around. All Right Reserved.</p>
+			</div>
+		</footer>
+		
+		<!-- Script JS for Bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Login Register Script -->
+		<script type="text/javascript">
+			var name = "";
+			var username = "";
+			var email = "";
+			var password = "";
+
+			function register() {
+				name = document.getElementById("fullname").value;
+				username = document.getElementById("username").value;
+				email = document.getElementById("email").value;
+				password = document.getElementById("password").value;
+			
+	            alert("Selamat anda telah berhasil register!");
+
+			}
+
+	        function login() {
+	            var status = 0;
+
+	            // value nama
+				var user = document.getElementById("user").value;
+				// value password
+				var pass = document.getElementById("pass").value;
+
+	            if (user == username && pass == password) {
+	                alert("Selamat anda telah berhasil login!");
+	            } else {
+	                alert("Username/Password yang anda masukan salah!");
+	            }
+	        }
+		</script>
+	</body>
+</html>
